@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Анкета</title>
+</head>
+<body>
+
+    <section>
+        <h2>Чтобы отозваться на вакансию, заполните анкету!</h2>
+        <form id="user-form" enctype="multipart/form-data" action="#" method="POST">
+
+            <div>
+                <label for="surname">Фамилия</label>
+                <input id="surname" type="text" minlength="2" maxlength="20" name="user-surname">
+            </div>
+
+            <div>
+                <label for="name">Имя</label>
+                <input id="name" type="text" minlength="2" maxlength="20" name="user-name">
+            </div>
+
+            <div>
+                <label for="patronymic">Отчество</label>
+                <input id="patronymic" type="text" minlength="2" maxlength="50" name="user-patronymic">
+            </div>
+
+            <div>
+                <label for="dob">Дата рождения</label>
+                <input id="dob" type="date" name="user-dob">
+            </div>
+
+            <div>
+                <label for="photo">Фото</label>
+                <input id="photo" type="file" accept="image/*" name="photo">
+            </div>
+
+            <div>
+                <span>Образование</span>
+                <label> <input type="radio" value="1" name="read">Высшее</label>
+                <label> <input type="radio" value="2" name="read">Средне-специальное</label>
+                <label> <input type="radio" value="3" name="read">Среднее</label>
+            </div>
+
+            <div>
+                <label for="institute">Учебное заведение</label>
+                <input id="institute" type="text" minlength="3" maxlength="30" name="institute">
+            </div>
+
+            <div>
+                <label for="year">Год окончания</label>
+                <input id="year" type="text" minlength="4" maxlength="4" name="year">
+            </div>
+
+            <div>
+                <label for="certificate">Загрузите дипломы / сертификаты</label>
+                <input id="certificate" type="file" accept="image/*" multiple name="certificate[]">
+            </div>
+
+            <div>
+                <label for="language">Знание иностранных языков</label>
+                <select id="language" name="language" multiple>
+                    <option value="language1">Английский</option>
+                    <option value="language2">Французский</option>
+                    <option value="language3">Испанский</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="about-me">О себе</label>
+                <textarea id="about-me" placeholder="Напишите немного о себе" name="about-user"></textarea>
+            </div> 
+            
+            <div>
+                <label for="email">E-mail</label>
+                <input id="email" type="email" placeholder="e-mail" name="user-email"> 
+            </div>
+            
+            <div>
+                <label for="phone-number">Телефон в формате 9ХХ-ХХХ-ХХ-ХХ</label>
+                <input id="phone-number" type="tel" name="user-phone-number" pattern="9[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
+            </div>
+
+        </form>
+
+            <div>
+                <button type="submit" form="user-form">Отправить анкету</button>
+            </div>
+
+    </section>
+    
+</body>
+</html>
